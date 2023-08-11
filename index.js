@@ -11,7 +11,7 @@ require('dotenv').config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use('/tmp', express.static('tmp'));
+app.use('/temp', express.static('temp'));
 
 app.use(flash());
 app.use(cors());
