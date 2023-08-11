@@ -5,6 +5,7 @@ const routes = require('./routes');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const handleCors = require('./middlewares/cors');
+const bodyParser = require('body-parser');
 
 require('dotenv').config();
 
@@ -16,6 +17,7 @@ app.use(flash());
 app.use(cors());
 app.use(cookieParser());
 app.use(handleCors);
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.json({ message: 'api running !!' });
