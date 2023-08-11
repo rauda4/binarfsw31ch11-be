@@ -10,7 +10,7 @@ require('dotenv').config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('temp'));
+app.use(express.static('/temp'));
 
 app.use(flash());
 app.use(cors());

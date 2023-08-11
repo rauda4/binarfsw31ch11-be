@@ -1,6 +1,6 @@
-const multer = require("multer");
-const path = require("path");
-const tempDir = path.join(__dirname, "../temp"); // Pastikan "/temp" sesuai dengan direktori penyimpanan sementara yang benar
+const multer = require('multer');
+const path = require('path');
+const tempDir = path.join(__dirname, '../temp'); // Pastikan "/temp" sesuai dengan direktori penyimpanan sementara yang benar
 
 const diskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
@@ -11,4 +11,4 @@ const diskStorage = multer.diskStorage({
   },
 });
 
-module.exports = multer({ storage: diskStorage }).single("image");
+module.exports = multer({ storage: diskStorage }).single('image');
