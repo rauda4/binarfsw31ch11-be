@@ -2,7 +2,7 @@ const express = require('express');
 const flash = require('express-flash');
 const app = express();
 const routes = require('./routes');
-const cors = require('cors');
+// const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const handleCors = require('./middlewares/cors');
 
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static('/temp'));
 
 app.use(flash());
-app.use(cors());
+// app.use(cors());
 app.use(cookieParser());
 app.use(handleCors);
 
