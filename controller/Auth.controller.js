@@ -17,7 +17,7 @@ class AuthController {
       const { username, password, email, total_score, biodata, city } =
         req.body;
       const upload = await uploadImage(req.file.path);
-      // await fs.unlinkSync(req.file.path);
+      await fs.unlinkSync(req.file.path);
       const imageUrl = upload.url;
       const hashPw = await bcrypt.hash(password, 12);
       const parsedTotalScore = parseInt(total_score);
